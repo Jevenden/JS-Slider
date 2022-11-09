@@ -51,14 +51,16 @@ const getLastSlide = () => {
   slideNumber = length;
 };
 
-right.addEventListener("click", () => {
-  slideNumber < length ? nextSlide() : getFirstSlide();
+const changeColor = () => {
   resetBgColor();
   dots[slideNumber - 1].style.backgroundColor = "white";
+};
+right.addEventListener("click", () => {
+  slideNumber < length ? nextSlide() : getFirstSlide();
+  changeColor();
 });
 
 left.addEventListener("click", () => {
   slideNumber > 1 ? prevSlide() : getLastSlide();
-  resetBgColor();
-  dots[slideNumber - 1].style.backgroundColor = "white";
+  changeColor();
 });
