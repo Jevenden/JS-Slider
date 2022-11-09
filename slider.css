@@ -49,9 +49,10 @@ body{
     gap: 30px;
 }
 
-.button{
+.dot{
     width: 15px;
     height: 15px;
     border-radius: 50%;
     border: 1px solid #fff;
+    cursor: pointer;
 }
